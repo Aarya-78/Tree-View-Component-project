@@ -175,7 +175,7 @@ function App() {
     <div className="app">
       <header className="app-header">
         <h1>Tree View & Kanban Board Demo</h1>
-        <p>Front-End Developer Test Implementation</p>
+     
       </header>
 
       <main className="app-main">
