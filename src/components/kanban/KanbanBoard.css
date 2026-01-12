@@ -1,0 +1,16 @@
+.kanban-board {
+  display: flex;
+  gap: 16px;
+  padding: 20px;
+  min-height: 500px;
+  background: #f8f9fa;
+  border-radius: 8px;
+}
+
+@media (max-width: 768px) {
+  .kanban-board {
+    flex-direction: column;
+    gap: 12px;
+    padding: 12px;
+  }
+}

@@ -1,0 +1,141 @@
+.tree-node {
+  position: relative;
+}
+
+.tree-node.dragging {
+  opacity: 0.5;
+  z-index: 1000;
+}
+
+.tree-node-content {
+  display: flex;
+  align-items: center;
+  padding: 4px 8px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.2s;
+  user-select: none;
+}
+
+.tree-node-content:hover {
+  background-color: #e9ecef;
+}
+
+.tree-node-content.drop-target {
+  background-color: #d4edda;
+  border: 2px dashed #0af641;
+}
+
+.tree-node-icon {
+  width: 16px;
+  height: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 8px;
+  color: #6c757d;
+  cursor: pointer;
+  font-size: 10px;
+}
+
+.tree-node-icon .spacer {
+  width: 16px;
+}
+
+.tree-node-text {
+  flex: 1;
+  min-height: 24px;
+  display: flex;
+  align-items: center;
+}
+
+.tree-node-text span {
+  padding: 2px 4px;
+  border-radius: 3px;
+}
+
+.tree-node-edit-input {
+  border: 1px solid #007bff;
+  border-radius: 3px;
+  padding: 2px 4px;
+  font-size: inherit;
+  background: white;
+  outline: none;
+  width: 100%;
+}
+
+.tree-node-actions {
+  display: flex;
+  gap: 4px;
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+.tree-node-content:hover .tree-node-actions {
+  opacity: 1;
+}
+
+.tree-node-action-btn {
+  width: 20px;
+  height: 20px;
+  border: none;
+  border-radius: 50%;
+  background: #28a745;
+  color: white;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: bold;
+  transition: background-color 0.2s;
+}
+
+.tree-node-action-btn:hover {
+  background: #218838;
+}
+
+.tree-node-action-btn.delete {
+  background: #dc3545;
+}
+
+.tree-node-action-btn.delete:hover {
+  background: #c82333;
+}
+
+.tree-node-loading {
+  color: #6c757d;
+  font-style: italic;
+  font-size: 12px;
+  margin-left: 8px;
+}
+
+.tree-node-children {
+  border-left: 1px solid #dee2e6;
+  margin-left: 8px;
+}
+
+.tree-node-drop-zone {
+  height: 4px;
+  margin: 2px 0;
+  border-radius: 2px;
+  transition: all 0.2s;
+  opacity: 0;
+}
+
+.tree-node-drop-zone.active {
+  background-color: #007bff;
+  opacity: 1;
+}
+
+.tree-node-drop-before {
+  margin-left: 20px;
+}
+
+.tree-node-drop-after {
+  margin-left: 20px;
+}
+
+.tree-node:hover .tree-node-drop-zone {
+  opacity: 0.3;
+}
